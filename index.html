@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>port and back wage data viz</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -14,13 +14,130 @@
     <![endif]-->
   </head>
 <style>
-.tableauPlaceholder{
-  margin-right: auto;
-  margin-left: auto;
-}
+  .tableauPlaceholder{
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 150px;
+  }
+
+  body{
+    font-family: Arial, sans-serif; 
+  }
+
+  h2{
+    text-align: center;
+    color: #666666;
+  }
+
+  h1{
+    color:#666666;
+    font-size: 60px;
+  }
+
+  p, h5{
+    color: #808080;
+  }
+
+  .title p, h1, h5{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: 
+  }
+
+  .title p{
+    width: 400px;
+    font-family: Garamond, serif;
+  }
+
+
+
+  .backwages, .tree, .heatmap1, .heatmap2, .heatmap3, .title{
+    width:700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #cover1{
+    position:absolute;
+    width:100%;
+    height:150px;
+    top:820px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    z-index: 99;
+  }
+
+   #cover2{
+    position:absolute;
+    width:100%;
+    height:150px;
+    top:1600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    z-index: 99;
+  }
+
+  #cover3{
+    position:absolute;
+    width:100%;
+    height:150px;
+    top:2440px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    z-index: 99;
+  }
+
+  #cover4{
+    position:absolute;
+    width:100%;
+    height:150px;
+    top:3140px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    z-index: 99;
+  }
+
+  #cover5{
+    position:absolute;
+    width:100%;
+    height:150px;
+    top:3940px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    z-index: 99;
+  }
+
+  #cover6{
+    position:absolute;
+    width:100%;
+    height:150px;
+    top:4740px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    z-index: 99;
+  }
+
+
 </style>
 
   <body>
+
+    <!-- Here lie all the covers  -->
+
+    <div id="cover1"></div>
+    <div id="cover2"></div>
+    <div id="cover3"></div>
+    <div id="cover4"></div>
+    <div id="cover5"></div>
+    <div id="cover6"></div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -28,9 +145,50 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 669px;'><noscript><a href='#'><img alt='Ports(1) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;Ports1&#47;Ports1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Ports1&#47;Ports1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;Ports1&#47;Ports1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+    <div class="title">
+    <h1>The container economy</h1>
+    <p>Port traffic has doubled in two decades.</p>
+    <p>These are the ports carrying the most weight.</p>
+    <h5>by Brett Murphy</h5>
+    </div>
 
-    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 669px;'><noscript><a href='#'><img alt='Legend-Intro ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-legendfinal&#47;Legend-Intro&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='backwages-legendfinal&#47;Legend-Intro' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-legendfinal&#47;Legend-Intro&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 669px;'><noscript><a href='#'><img alt='Ports(1) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;Ports1&#47;Ports1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Ports1&#47;Ports1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;Ports1&#47;Ports1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+    
+    <div class="backwages">
+    <h2>How companies keep billions from their employees</h2>
+    <p>The Department of Labor investigates thousands of companies every year, either on its own suspicion or after an employee files a complaint. The DOL compiled every case it’s opened in each of the country's eleven "super sectors" since 2007 — some findings go back decades. Most cases involve violations of the Fair Labor Standards Act, like skirting minimum wage laws or unpaid overtime. In the past seven years, there have been almost 200 thousand cases opened and closed across 1,400 different industries, from commercial banking to drive-in movie theaters. The DOL has assessed more than $2.4 billion (adjusted) in total back wages all over the country.</p>
+    </div>
+
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 854px; height: 389px;'><noscript><a href='#'><img alt='Legend-Intro ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-heat-industryfinal&#47;Legend-Intro&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='854' height='389' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='backwages-heat-industryfinal&#47;Legend-Intro' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-heat-industryfinal&#47;Legend-Intro&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+    <div class="tree">
+    <p>Those 11 super sectors are divided into 56 different industries. As you can see, some sectors are more fractured than others. Experts say the industries with more laborers and less managers  -- like construction, retail and food services -- lend themselves to worse conditions. </p>
+    </div>
+
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 924px; height: 569px;'><noscript><a href='#'><img alt='industry-tree ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-treefinal&#47;industry-tree&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='924' height='569' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='backwages-treefinal&#47;industry-tree' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-treefinal&#47;industry-tree&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+     <div class="heatmap1">
+     <h2>When and where are the heaviest violations?</h2>
+     <p>Even though the cases opened in 2007, the DOL often found violations that occurred earlier. These heat maps show when the top sectors -- divided by 11 broad categories -- committed the heaviest violations; the darker shades. Values are adjusted for inflation.</p>
+     </div>
+
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 974px; height: 419px;'><noscript><a href='#'><img alt='sector-heatmap ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-heat-industryfinal&#47;sector-heatmap&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='974' height='419' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='backwages-heat-industryfinal&#47;sector-heatmap' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-heat-industryfinal&#47;sector-heatmap&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+    <div class="heatmap2">
+     <h2>By Industry</h2>
+     <p>Recently the DOL has come down more heavily on industries with many workers and little oversight: construction, retail and food services. These are the 15 industries (of 56) with the most accumulated back wages assessed against them. The darkest shaded bricks represent the heaviest sums. 
+     </p>
+     </div>
+
+
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 469px;'><noscript><a href='#'><img alt='Industry-Heat ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;B9&#47;B9PYP9RBS&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='469' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;B9PYP9RBS' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;B9&#47;B9PYP9RBS&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+     <div class="heatmap3">
+     <h2>By Business</h2>
+     <p>The DOL often focuses investigations on just a couple of large corporations. Its $48 million probe into Wal-Mart ended in 2007, thus the dark square in Department Stores. But most other cases are relatively small, spread out over 1,400 types of businesses. These are the top 15. </p>
+     </div>
+
+     <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 469px;'><noscript><a href='#'><img alt='Business-H ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-heat-industryfinal&#47;Business-H&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='469' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='backwages-heat-industryfinal&#47;Business-H' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ba&#47;backwages-heat-industryfinal&#47;Business-H&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 
 
 
